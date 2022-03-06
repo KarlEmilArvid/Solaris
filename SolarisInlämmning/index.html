@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+
+    <script async type="module">
+        import { selectPlanet, closeOverlay } from './index.js';
+
+        [...document.querySelectorAll(`button.planet-btn`)].forEach((el) => {
+            el.addEventListener(`click`, selectPlanet, false);
+        });
+
+        document.getElementById(`close-overlay`).addEventListener(`click`, closeOverlay);
+    </script>
+</head>
+<body>
+    <main>
+        <button class="planet-btn" id="0" >
+            <figure class="solen"><img src="./img/Subtract.svg" alt="Solen"></figure>
+        </button>
+        <button class="planet-btn" id="1" >
+            <figure class="planet"><img src="./img/Ellipse 2.svg" alt="Merkurius"></figure>
+        </button>
+        <button class="planet-btn" id="2" >
+            <figure class="planet"><img src="./img/Ellipse 3.svg" alt="Venus"></figure>
+        </button>
+        <button class="planet-btn" id="3" >
+            <figure class="planet"><img src="./img/Ellipse 4.svg" alt="Jorden"></figure>
+        </button>
+        <button class="planet-btn" id="4" >
+            <figure class="planet"><img src="./img/Ellipse 5.svg" alt="Mars"></figure>
+        </button>
+        <button class="planet-btn" id="5" >
+            <figure class="planet"><img src="./img/Ellipse 6.svg" alt="Jupiter"></figure>
+        </button>
+        <button class="planet-btn" id="6" >
+            <figure class="planet"><img src="./img/Ellipse 7.svg" alt="Saturnus"></figure>
+        </button>
+        <button class="planet-btn" id="7" >
+            <figure class="planet"><img src="./img/Ellipse 8.svg" alt="Uranus"></figure>
+        </button>
+        <button class="planet-btn" id="8" >
+            <figure class="planet"><img src="./img/Ellipse 9.svg" alt="Neptunus"></figure>
+        </button>
+    </main>
+
+    <section class="overlay" id="close-overlay">
+        <figure class="tellus"><img src="./img/Subtract-Tellus.svg" alt=""></figure>
+        <article class="overlay-text">
+            <h2 class="name" id="p-name"></h2>
+            <p class="latin-name" id="p-latin-name"></p>
+            <p class="description" id="p-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, in?</p>
+            <hr class="line-one">
+            <p class="circumference">OMKRETS <br><span id="p-circumference"></span></p>
+            <p class="distance">KM FRÅN SOLEN <br><span id="p-distance"></span></p>
+            <p class="max-temp">MAX TEMPERATUR <br><span id="p-max-temp"></span></p>
+            <p class="min-temp">MIN TEMPERATUR <br><span id="p-min-temp"></span></p>
+            <hr class="line-two">
+            <p class="moons">MÅNAR <br><span id="p-moons"></span></p>
+            <br />
+        </article>
+    </section>
+</body>
+</html>
